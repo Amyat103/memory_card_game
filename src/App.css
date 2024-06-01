@@ -1,0 +1,31 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 20px;
+  gap: 20px;
+}
+
+.pokemon:hover {
+  box-shadow: 0 0 10px;
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  border: 1px solid black;
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  background-image: url(/src/assets/pokemon_background.png);
+  background-size: cover;
+  width: 100%;
+}
+
+h2 {
+  margin: 0;
+}

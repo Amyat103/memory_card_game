@@ -33,16 +33,22 @@ function App() {
 
   console.log(pokemons);
 
+  function createCard(poke) {
+    return (
+      <div className='pokemon' key={poke.id} id={poke.name}>
+        <img src={poke.img} alt={poke.name}></img>
+        <h2>{poke.name}</h2>
+      </div>
+    );
+  }
+
   return (
     <>
-      {pokemons.map((pokemon) => {
-        return (
-          <div key={pokemon.id}>
-            <img src={pokemon.img}></img>
-            {pokemon.name}
-          </div>
-        );
-      })}
+      <div className='grid-container'>
+        {pokemons.map((pokemon) => {
+          return createCard(pokemon);
+        })}
+      </div>
     </>
   );
 }
