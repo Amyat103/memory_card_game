@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     async function fetchProcessPokemon() {
       const firstPokemon = await getPokemon();
-      const allPokemons = firstPokemon.slice(0, 20);
+      const allPokemons = firstPokemon.slice(0, 24);
       const filteredPokemon = allPokemons.map((pokemon) => {
         const splitArr = pokemon.url.split('/');
         const id = splitArr[splitArr.length - 2];
@@ -43,13 +43,13 @@ function App() {
   }
 
   return (
-    <>
+    <div className='main'>
       <div className='grid-container'>
         {pokemons.map((pokemon) => {
           return createCard(pokemon);
         })}
       </div>
-    </>
+    </div>
   );
 }
 
