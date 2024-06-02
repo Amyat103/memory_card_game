@@ -1,4 +1,13 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .score-board {
   font-size: 18px;
   display: flex;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
 }

@@ -44,6 +44,7 @@ function App() {
       setScore((prevScore) => prevScore + 1);
     } else {
       resetScore();
+      setSelected([]);
     }
     shuffle(pokemons);
   }

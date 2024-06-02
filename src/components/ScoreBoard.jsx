@@ -10,9 +10,13 @@ function ScoreBoard({ score = 0 }) {
   }, [score]);
 
   return (
-    <div className='score-board'>
-      <h4>Score: {score}</h4>
-      <h4>High Score: {maxScore}</h4>
+    <div className='main'>
+      <h2>Pokemon Game</h2>
+      <h3>{"Don't click The same pokemon twice"}</h3>
+      <div className='score-board'>
+        <h4>Score: {score}</h4>
+        <h4>High Score: {maxScore}</h4>
+      </div>
     </div>
   );
 }
