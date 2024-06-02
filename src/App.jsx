@@ -46,7 +46,7 @@ function App() {
       resetScore();
       setSelected([]);
     }
-    shuffle(pokemons);
+    setPokemons((prev) => shuffle(prev));
   }
 
   // console.log(pokemons);
@@ -66,12 +66,14 @@ function App() {
   }
 
   const shuffle = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
+    let shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
-      let temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
+      let temp = shuffledArray[i];
+      shuffledArray[i] = shuffledArray[j];
+      shuffledArray[j] = temp;
     }
+    return shuffledArray;
   };
 
   return (
