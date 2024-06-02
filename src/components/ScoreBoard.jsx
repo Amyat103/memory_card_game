@@ -1,7 +1,8 @@
 import './ScoreBoard.css';
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-function ScoreBoard({ score }) {
+function ScoreBoard({ score = 0 }) {
   const [maxScore, setMaxScore] = useState(score);
 
   useEffect(() => {
@@ -15,5 +16,9 @@ function ScoreBoard({ score }) {
     </div>
   );
 }
+
+ScoreBoard.propTypes = {
+  score: PropTypes.number.isRequired,
+};
 
 export default ScoreBoard;
